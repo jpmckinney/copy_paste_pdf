@@ -5,7 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/opennorth/copy_paste_pdf/badge.png?branch=master)](https://coveralls.io/r/opennorth/copy_paste_pdf)
 [![Code Climate](https://codeclimate.com/github/opennorth/copy_paste_pdf.png)](https://codeclimate.com/github/opennorth/copy_paste_pdf)
 
-[Tabula](https://github.com/jazzido/tabula) was written for those cases where you can’t easily copy-and-paste tabular data from a PDF to a spreadsheet. Surprisingly, Tabula sometimes fails where copy-and-pasting succeeds. This project is for [those times](http://www.atipp.gov.nl.ca/info/coordinators.html) when copy-and-pasting is all you need (and where nothing else works).
+[Tabula](https://github.com/jazzido/tabula) was written for those cases where you can’t easily copy-and-paste tables from a PDF to a spreadsheet. Surprisingly, Tabula sometimes fails where copy-and-pasting succeeds. This project is for [those cases](http://www.atipp.gov.nl.ca/info/coordinators.html) when copy-and-pasting is all you need (and where nothing else works).
 
 This gem only works on OS X.
 
@@ -30,7 +30,9 @@ If you want the script to quit Preview and Excel once it's done, pass a third ar
 
 The script may [pinwheel](http://en.wikipedia.org/wiki/Spinning_pinwheel) while copying the contents of the PDF and while pasting the contents to the spreadsheet. If it looks like nothing is happening, wait a few seconds.
 
-You can work in other applications while the script is running - just don't use the clipboard as it will interfere with the script.
+You can work in other applications while the script is running - just don't use the clipboard as it may interfere with the script.
+
+This method is admittedly not very efficient. Running time averages under 2 seconds per page but varies considerably depending on your system's load.
 
 ### Data Cleaning
 
