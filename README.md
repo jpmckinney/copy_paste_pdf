@@ -54,19 +54,19 @@ CSV.open('/path/to/clean.csv', 'w') do |csv|
 end
 ```
 
-If the table in the PDF contained vertically-merged cells, then, in the CSV, the first merged cells will have a value and the others will be empty. To copy the value of the first merged cell into the others, use the `copy_into_cell_below` method, which accepts the indices of columns containing merged cells:
+If the table in the PDF contained vertically-merged cells, then, in the CSV, the first of the merged cells will have a value and the others will be empty. To copy the value of the first cell to the others, use the `copy_into_cell_below` method, which accepts the indices of columns containing merged cells:
 
 ```ruby
 table.copy_into_cell_below(0, 3, 4)
 ```
 
-Sometimes, if a cell contains multiple lines of text, the PDF to CSV conversion will incorrectly break the cell into multiple rows. To merge the spurious rows back, use the `merge_into_cell_above` method, which accepts the indices of columns in which this error occurs:
+Sometimes, if a cell contains multiple lines of text, the PDF to CSV conversion will incorrectly break the cell into multiple rows. To remove the spurious row and merge its values into the row above, use the `merge_into_cell_above` method, which accepts the indices of columns in which this error occurs:
 
 ```ruby
 table.merge_into_cell_above(1, 2)
 ```
 
-With additional time and effort, these two methods can be made to operate without needing column indices as hints.
+With additional time and effort, these two methods can be made to operate without needing columns as hints.
 
 ## Troubleshooting
 
@@ -87,11 +87,11 @@ If, like me, you almost never write AppleScript, you can access much of AppleScr
 Most of the PDFs I work with contain no tables. In those cases I either:
 
 * Run `pdftotext filename.pdf` to convert the PDF to text, and write a script using regular expressions to parse the output.
-* Run `pdftotext -layout filename.pdf` to convert the PDF to text while preserving the text layout - very useful when working with two-column layouts.
-* Use [commercial software](http://reviews.reporterslab.org/search?q=&type=products&category=pdf-tools-2011-11-09) like Adobe Acrobat Pro to save the PDF to another format, usually Microsoft Excel.
+* Run `pdftotext -layout filename.pdf` to convert the PDF to text while preserving the text layout – very useful when working with two-column layouts.
+* Use [commercial software](http://reviews.reporterslab.org/search?q=&type=products&category=pdf-tools-2011-11-09) like Adobe Acrobat Pro to save the PDF to another format, usually Excel.
 * I recently learned that Apple's Automator has an `Extract PDF Text` action which performs well.
 
-For PDFs containing tables, I discovered that copy-pasting from Apple's Preview to Microsoft Excel worked better than all alternatives tested, including [Tabula](https://github.com/jazzido/tabula), for the PDFs I was interested in.
+For PDFs containing tables, I discovered that copy-pasting from Apple's Preview to Microsoft Excel worked better than all alternatives tested, for the PDFs I was interested in.
 
 ## Bugs? Questions?
 
