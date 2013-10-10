@@ -13,9 +13,11 @@ module CopyPastePDF
     # @param [Array] indices the cell indices to copy
     # @yieldparam [Array] row a row in the table
     # @yieldreturn [Boolean] whether to skip the row from the table
-    # @raise if a destination has no source
-    # @raise if a destination cell already has a value
-    # @raise if a row is neither a source nor a destination
+    # @raise [CopyPastePDF::MissingSourceError] if a destination has no source
+    # @raise [CopyPastePDF::CopyToNonEmptyCellError] if a destination cell
+    #   already has a value
+    # @raise [CopyPastePDF::InvalidRowError] if a row is neither a source nor a
+    #   destination
     def copy_into_cell_below(*indices)
       source = nil
       each do |row|
@@ -28,16 +30,16 @@ module CopyPastePDF
             if source
               indices.each_with_index do |index,i|
                 if row[index]
-                  raise "destination cell #{index} already has a value (#{row[index]})"
+                  raise CopyToNonEmptyCellError, "destination cell #{index} already has a value #{row[index]}"
                 else
                   row[index] = source[i]
                 end
               end
             else
-              raise "#{row} is a destination, but it has no source"
+              raise MissingSourceError, "#{row} is a destination, but it has no source"
             end
           else
-            raise "#{row} is neither a source nor a destination"
+            raise InvalidRowError, "#{row} is neither a source nor a destination"
           end
         end
       end
@@ -47,7 +49,7 @@ module CopyPastePDF
     # empty, into the corresponding cells of the prececeding line.
     #
     # @param [Array] indices the cell indices to merge
-    # @raise if a destination cell is empty
+    # @raise [CopyPastePDF::MergeWithEmptyCellError] if a destination cell is empty
     def merge_into_cell_above(*indices)
       each_with_index.reverse_each do |row,i|
         if row.each_with_index.all?{|value,j| value.nil? || indices.include?(j)}
@@ -55,7 +57,7 @@ module CopyPastePDF
             if self[i - 1][index]
               self[i - 1][index] = "#{self[i - 1][index]}\n#{row[index]}"
             else
-              raise "cell #{index} is empty, so its value can't be merged"
+              raise MergeWithEmptyCellError, "cell #{index} is empty and can't be merged"
             end
           end
           delete_at(i)
