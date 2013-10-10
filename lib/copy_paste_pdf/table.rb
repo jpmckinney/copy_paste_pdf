@@ -14,7 +14,7 @@ module CopyPastePDF
     # @yieldparam [Array] row a row in the table
     # @yieldreturn [Boolean] whether to skip the row from the table
     # @raise if a destination has no source
-    # @raise if a destination cell has a value
+    # @raise if a destination cell already has a value
     # @raise if a row is neither a source nor a destination
     def copy_into_cell_below(*indices)
       source = nil
@@ -28,13 +28,13 @@ module CopyPastePDF
             if source
               indices.each_with_index do |index,i|
                 if row[index]
-                  raise "#{index} contains #{row[index]}"
+                  raise "destination cell #{index} already has a value (#{row[index]})"
                 else
                   row[index] = source[i]
                 end
               end
             else
-              raise "#{row} has no source"
+              raise "#{row} is a destination, but it has no source"
             end
           else
             raise "#{row} is neither a source nor a destination"
@@ -55,7 +55,7 @@ module CopyPastePDF
             if self[i - 1][index]
               self[i - 1][index] = "#{self[i - 1][index]}\n#{row[index]}"
             else
-              raise "#{index} is empty"
+              raise "cell #{index} is empty, so its value can't be merged"
             end
           end
           delete_at(i)
