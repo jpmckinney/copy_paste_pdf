@@ -14,6 +14,7 @@ on run argv
   if count of argv is 2 then set close_applications to false
 
   tell application "Preview"
+    -- It seems Preview won't work if we `run` or `launch` it.
     activate
     open input
   end
@@ -51,7 +52,7 @@ on run argv
   end repeat
 
   tell application "Microsoft Excel"
-    activate
+    launch
     make new workbook
     paste worksheet active sheet
     save workbook as active workbook filename output file format CSV file format overwrite yes
