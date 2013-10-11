@@ -9,7 +9,7 @@
 
 [Tabula](https://github.com/jazzido/tabula) was written for those cases where you can’t easily copy-and-paste tables from a PDF to a spreadsheet. Surprisingly, Tabula sometimes fails where copy-and-pasting succeeds. This project is for [those cases](http://www.atipp.gov.nl.ca/info/coordinators.html) when copy-and-pasting is all you need (and where nothing else works).
 
-This gem only works on OS X.
+This gem only works on OS X. It works best on PDFs whose source materials are Excel spreadsheets.
 
 ## Getting Started
 
