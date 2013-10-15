@@ -101,6 +101,7 @@ For PDFs containing tables, I discovered that copy-pasting from Apple's Preview 
 * If you need to extract text from text-based PDFs, use [docsplit](http://documentcloud.github.io/docsplit/) or `pdftotext`
 * If you need to extract tables from image-based PDFs, see [Carpenter](https://github.com/stefanw/carpenter) or [DocHive](https://github.com/raleighpublicrecord/dochive)
 * If you need to extract text from image-based PDFs, use [docsplit](http://documentcloud.github.io/docsplit/) or Tesseract
+* If you have many volunteers, consider using [Crowdcrafting to transcribe tables](http://www.youtube.com/watch?v=yfnJHALzlZc)
 
 ## Bugs? Questions?
 
