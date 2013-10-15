@@ -95,6 +95,13 @@ Most of the PDFs I work with contain no tables. In those cases I either:
 
 For PDFs containing tables, I discovered that copy-pasting from Apple's Preview to Microsoft Excel worked better than all alternatives tested, for the PDFs I was interested in.
 
+## Related projects
+
+* If you need to extract tables from text-based PDFs, see [Tabula](https://github.com/jazzido/tabula)
+* If you need to extract text from text-based PDFs, use [docsplit](http://documentcloud.github.io/docsplit/) or `pdftotext`
+* If you need to extract tables from image-based PDFs, see [Carpenter](https://github.com/stefanw/carpenter) or [DocHive](https://github.com/raleighpublicrecord/dochive)
+* If you need to extract text from image-based PDFs, use [docsplit](http://documentcloud.github.io/docsplit/) or Tesseract
+
 ## Bugs? Questions?
 
 This project's main repository is on GitHub: [http://github.com/opennorth/copy_paste_pdf](http://github.com/opennorth/copy_paste_pdf), where your contributions, forks, bug reports, feature requests, and feedback are greatly welcomed.
