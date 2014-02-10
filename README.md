@@ -103,6 +103,8 @@ For PDFs containing tables, I discovered that copy-pasting from Apple's Preview 
 * If you need to extract text from image-based PDFs, use [docsplit](http://documentcloud.github.io/docsplit/) or Tesseract
 * If you have many volunteers, consider using [Crowdcrafting to transcribe tables](http://www.youtube.com/watch?v=yfnJHALzlZc)
 
+You may also be interested in the Open Knowledge Foundation's [messytables](https://github.com/okfn/messytables) and [pdftables](https://github.com/okfn/pdftables).
+
 ## Bugs? Questions?
 
 This project's main repository is on GitHub: [http://github.com/opennorth/copy_paste_pdf](http://github.com/opennorth/copy_paste_pdf), where your contributions, forks, bug reports, feature requests, and feedback are greatly welcomed.
