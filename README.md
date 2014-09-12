@@ -1,11 +1,8 @@
 # Copy-Paste PDF
 
-<!--
-[![Build Status](https://secure.travis-ci.org/opennorth/copy_paste_pdf.png)](http://travis-ci.org/opennorth/copy_paste_pdf)
+[![Gem Version](https://badge.fury.io/rb/copy_paste_pdf.svg)](http://badge.fury.io/rb/copy_paste_pdf)
 [![Dependency Status](https://gemnasium.com/opennorth/copy_paste_pdf.png)](https://gemnasium.com/opennorth/copy_paste_pdf)
-[![Coverage Status](https://coveralls.io/repos/opennorth/copy_paste_pdf/badge.png?branch=master)](https://coveralls.io/r/opennorth/copy_paste_pdf)
 [![Code Climate](https://codeclimate.com/github/opennorth/copy_paste_pdf.png)](https://codeclimate.com/github/opennorth/copy_paste_pdf)
--->
 
 [Tabula](https://github.com/jazzido/tabula) was written for those cases where you can’t easily copy-and-paste tables from a PDF to a spreadsheet. Surprisingly, Tabula sometimes fails where copy-and-pasting succeeds. This project is for [those cases](http://www.atipp.gov.nl.ca/info/coordinators.html) when copy-and-pasting is all you need (and where nothing else works).
 
