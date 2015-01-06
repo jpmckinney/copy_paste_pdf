@@ -5,9 +5,8 @@ Gem::Specification.new do |s|
   s.name        = "copy_paste_pdf"
   s.version     = CopyPastePDF::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Open North"]
-  s.email       = ["info@opennorth.ca"]
-  s.homepage    = "http://github.com/opennorth/copy_paste_pdf"
+  s.authors     = ["James McKinney"]
+  s.homepage    = "http://github.com/jpmckinney/copy_paste_pdf"
   s.summary     = %q{Converts PDF to CSV by copy-pasting from Apple's Preview to Microsoft Excel}
   s.license     = 'MIT'
 

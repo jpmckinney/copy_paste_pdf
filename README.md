@@ -1,8 +1,8 @@
 # Copy-Paste PDF
 
 [![Gem Version](https://badge.fury.io/rb/copy_paste_pdf.svg)](http://badge.fury.io/rb/copy_paste_pdf)
-[![Dependency Status](https://gemnasium.com/opennorth/copy_paste_pdf.png)](https://gemnasium.com/opennorth/copy_paste_pdf)
-[![Code Climate](https://codeclimate.com/github/opennorth/copy_paste_pdf.png)](https://codeclimate.com/github/opennorth/copy_paste_pdf)
+[![Dependency Status](https://gemnasium.com/jpmckinney/copy_paste_pdf.png)](https://gemnasium.com/jpmckinney/copy_paste_pdf)
+[![Code Climate](https://codeclimate.com/github/jpmckinney/copy_paste_pdf.png)](https://codeclimate.com/github/jpmckinney/copy_paste_pdf)
 
 [Tabula](https://github.com/jazzido/tabula) was written for those cases where you can’t easily copy-and-paste tables from a PDF to a spreadsheet. Surprisingly, Tabula sometimes fails where copy-and-pasting succeeds. This project is for [those cases](http://www.atipp.gov.nl.ca/info/coordinators.html) when copy-and-pasting is all you need (and where nothing else works).
 
@@ -102,8 +102,4 @@ For PDFs containing tables, I discovered that copy-pasting from Apple's Preview 
 
 You may also be interested in the Open Knowledge Foundation's [messytables](https://github.com/okfn/messytables) and [pdftables](https://github.com/okfn/pdftables).
 
-## Bugs? Questions?
-
-This project's main repository is on GitHub: [http://github.com/opennorth/copy_paste_pdf](http://github.com/opennorth/copy_paste_pdf), where your contributions, forks, bug reports, feature requests, and feedback are greatly welcomed.
-
-Copyright (c) 2013 Open North Inc., released under the MIT license
+Copyright (c) 2013 James McKinney, released under the MIT license
