@@ -1,6 +1,6 @@
 # Copy-Paste PDF
 
-[![Gem Version](https://badge.fury.io/rb/copy_paste_pdf.svg)](http://badge.fury.io/rb/copy_paste_pdf)
+[![Gem Version](https://badge.fury.io/rb/copy_paste_pdf.svg)](https://badge.fury.io/rb/copy_paste_pdf)
 [![Dependency Status](https://gemnasium.com/jpmckinney/copy_paste_pdf.png)](https://gemnasium.com/jpmckinney/copy_paste_pdf)
 [![Code Climate](https://codeclimate.com/github/jpmckinney/copy_paste_pdf.png)](https://codeclimate.com/github/jpmckinney/copy_paste_pdf)
 
@@ -27,7 +27,7 @@ If you want the script to quit Preview and Excel once it's done, pass a third ar
 
     copy-paste-pdf.applescript /path/to/input.pdf /path/to/output.csv true
 
-The script may [pinwheel](http://en.wikipedia.org/wiki/Spinning_pinwheel) while copying the contents of the PDF and while pasting the contents to the spreadsheet. If it looks like nothing is happening, wait a few seconds.
+The script may [pinwheel](https://en.wikipedia.org/wiki/Spinning_pinwheel) while copying the contents of the PDF and while pasting the contents to the spreadsheet. If it looks like nothing is happening, wait a few seconds.
 
 You can work in other applications while the script is running - just don't use the clipboard as it may interfere with the script.
 
