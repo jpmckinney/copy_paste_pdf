@@ -1,7 +1,6 @@
 # Copy-Paste PDF
 
 [![Gem Version](https://badge.fury.io/rb/copy_paste_pdf.svg)](https://badge.fury.io/rb/copy_paste_pdf)
-[![Dependency Status](https://gemnasium.com/jpmckinney/copy_paste_pdf.png)](https://gemnasium.com/jpmckinney/copy_paste_pdf)
 [![Code Climate](https://codeclimate.com/github/jpmckinney/copy_paste_pdf.png)](https://codeclimate.com/github/jpmckinney/copy_paste_pdf)
 
 [Tabula](https://github.com/jazzido/tabula) was written for those cases where you can’t easily copy-and-paste tables from a PDF to a spreadsheet. Surprisingly, Tabula sometimes fails where copy-and-pasting succeeds. This project is for [those cases](http://www.atipp.gov.nl.ca/info/coordinators.html) when copy-and-pasting is all you need (and where nothing else works).
